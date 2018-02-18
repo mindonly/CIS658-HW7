@@ -3,5 +3,7 @@ class Bug < ApplicationRecord
     enum priority: [:low, :medium, :high]
     enum status: [:open, :closed, :monitor]
 
-    validates :title, :description, presence: true
+    validates :title, :description, :user, presence: true
+
+    belongs_to :user
 end

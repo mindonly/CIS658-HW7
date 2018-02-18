@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>User:</strong>
+  <%= @bug.user.try(:lname) ? @bug.user.try(:fname) + " " + @bug.user.try(:lname) : "NA" %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @bug.title %>
 </p>
@@ -24,6 +29,7 @@
   <strong>Status:</strong>
   <%= @bug.status %>
 </p>
+
 
 <%= link_to 'Edit', edit_bug_path(@bug) %> |
 <%= link_to 'Back', bugs_path %>

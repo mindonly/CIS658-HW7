@@ -10,3 +10,6 @@ Rails 5.1.4
 * issue type, priority, and status must have valid values (enumerated types)
 
 ### Iteration 2
+* lname, fname, and email cannot be blank whenever an author is created or edited
+* email must be unique and be a valid format
+* thumbnail must end in .png, .jpg, or .gif

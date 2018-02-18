@@ -9,10 +9,12 @@ class BugTest < ActiveSupport::TestCase
                           description: "blank description",
                           issue_type:0,
                           priority:0,
-                          status:0)
+                          status:0,
+                          user_id:3)
     end
 
     test "bug must be valid" do
+        puts @bug.title, @bug.description, @bug.issue_type, @bug.status, @bug.user_id
         assert @bug.valid?
     end
 
