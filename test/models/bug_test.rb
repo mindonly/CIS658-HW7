@@ -6,12 +6,6 @@ class BugTest < ActiveSupport::TestCase
   # end
     def setup
         @bug = bugs(:one)
-        #@bug = Bug.create(title: "blank title",
-        #                  description: "blank description",
-        #                  issue_type:0,
-        #                  priority:0,
-        #                  status:0,
-        #                  user_id:2)
     end
 
     test "bug must be valid" do
